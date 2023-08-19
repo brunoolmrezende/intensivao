@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff: 'Mulish', sans-serif;
+    --fc-title: #B52184;
+    --fc-text: #312D64;
+
+    --bg-color-section1: #F9F4FB;
+    --bg-color-midSection: linear-gradient(134deg, #343193 0%, #302C63 100%);
+    --bc-color-card: #FFF;
+}
+
+body {
+    font-family: var(--ff);
+}
+
+/*topSection*/
+.topSection {
+    width: 100%;
+    padding: 0 3.2rem 9.3rem 3.2rem;
+    background-color: var(--bg-color-section1);
+
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    animation: top 700ms ease-in-out backwards;
+}
+
+.firstImage img {
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    margin-top: 1.7rem;
+}
+
+.text h1 {
+    color:var(--fc-title);
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.text p {
+    color: var(--fc-text);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: normal;
+
+    margin: 0.5rem 0 3.5rem 0;
+}
+
+/*midSection*/
+.midSection {
+    background: var(--bg-color-midSection);
+    width: 100%;
+}
+
+.midSection h1 {
+    color: var(--fc-title);
+    font-size: 2.9rem;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.midSection p {
+    color: var(--fc-text);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.midSection .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    padding: 5.3rem 3.9rem;
+
+    place-items: center;
+
+    animation: mid 700ms ease-in-out backwards;
+}
+
+.midSection .container .card {
+    background: var(--bc-color-card);
+    border-radius: 2rem;
+    box-shadow: 0px 3.3107693195343018px 13.243077278137207px 0px rgba(0, 0, 0, 0.25);
+
+    padding: 2.65rem;
+
+    width: 100%;
+    height: 100%;
+
+    transition: all 300ms;
+    transition-timing-function: ease;
+}
+
+.midSection .container .card:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.midSection .container .card h1 {
+    margin-top: 3.3rem;
+    margin-bottom: 2rem;
+}
+
+.midSection .container .card p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+
+/*bottomSection*/
+.bottomSection {
+    background-color: var(--bg-color-section1);
+    width: 100%;
+}
+
+.bottomSection fieldset {
+    display: flex;
+    flex-direction: column;
+
+    padding: 7.8rem 4rem 6.5rem;
+    width: 100%;
+    height: 100%;
+
+    animation: bottom 700ms ease-in-out backwards;
+}
+
+.bottomSection fieldset h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--fc-title);
+    line-height: normal;
+}
+
+.bottomSection .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    margin-top: 4.3rem;
+    margin-bottom: 2.4rem;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 4.8rem;
+    padding: 12px 16px 12px 50px;
+
+    border-radius: 1.6rem;
+    border: 0.18rem solid var(--fc-text);
+
+    color: var(--fc-text);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+}
+
+.input-wrapper input::placeholder, 
+.input-wrapper textarea::placeholder {
+    color: var(--fc-text);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.input-wrapper textarea {
+    width: 100%;
+    height: 12.6rem;
+    padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+
+    border-radius: 1.6rem;
+    border: 0.18rem solid var(--fc-text);
+
+    color: var(--fc-text);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.24rem;
+
+    background-color: var(--bg-color-section1);
+}
+
+#name {
+    background: url(/images/person.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#e-mail {
+    background: url(/images/at.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+.button {
+    display: flex;
+    
+    height: 4.5rem;
+    width: 16rem;
+
+    padding: 1.6rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 16px;
+    border-style: none;
+    background: linear-gradient(134deg, #343193 0%, #302C63 100%);
+
+    color:var(--bc-color-card);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-transform: capitalize;
+
+    transition: all 300ms;
+    transition-timing-function: ease;
+}
+
+.button:hover {
+    filter:opacity(0.9);
+    transform:scale(1.1);
+    cursor: pointer;
+}
+
+footer {
+    background: linear-gradient(134deg, #343193 0%, #302C63 100%);
+    padding: 1.6rem;
+}
+
+footer p {
+    color: #FFF;
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    text-align: center;
+}
+
+input:invalid, textarea:invalid {
+    border: 1px solid red;
+}
+
+@keyframes top {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mid {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}   
+
+
+@media (min-width: 1100px) {
+   .text {
+    margin: 31.2rem 0 13.6rem 0;
+   }
+   
+    .text h1 {
+        font-size: 5.8287rem;
+    }
+
+    .text p {
+        font-size: 3.2rem;
+        margin: 0.8rem 0 17.9rem 0;
+    }
+
+    .topSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2.9rem 10.3rem 10.9rem;
+        max-height: 83.6rem;
+
+        margin: 0;
+
+        height: 100vh;
+    }
+
+    .topSection .text {
+        order: 1;
+        align-items: start;
+    }
+
+    .topSection .firstImage {
+        order: 2;
+
+    }
+
+    /*midSection*/
+
+    .midSection h1 {
+        font-size: 3.5302rem;
+    }
+    
+    .midSection .container .card p {
+        font-size: 1.9381rem;
+    }
+
+    .midSection .container {
+        display: flex;
+        flex-direction: row;
+        gap: 6rem;
+
+        padding: 6.4rem 11.1rem;
+    }
+
+    .midSection .container .card {
+        padding: 3.2rem;
+    }    
+}
